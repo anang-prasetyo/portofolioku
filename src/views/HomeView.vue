@@ -1,8 +1,8 @@
 <template>
   <main class="d-flex flex-column" style="row-gap: 5rem;">
     <the-welcome />
-    <!-- <my-skills /> -->
-    <!-- <my-projects /> -->
+    <my-skills />
+    <my-projects />
     <div v-for="i in 5" :key="i">
       <div>{{ i }}</div>
     </div>
@@ -22,8 +22,8 @@
 
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
-// import MySkills from '../components/MySkills.vue'
-// import MyProjects from '../components/MyProjects.vue'
+import MySkills from '../components/MySkills.vue'
+import MyProjects from '../components/MyProjects.vue'
 </script>
 
 <style scoped>
