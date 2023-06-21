@@ -3,7 +3,6 @@
     <the-welcome />
     <!-- <my-skills /> -->
     <!-- <my-projects /> -->
-    <!-- <my-proccess /> -->
     <div class="container">
       <div class="row">
         <div class="col">
@@ -22,7 +21,6 @@
 import TheWelcome from '../components/TheWelcome.vue'
 // import MySkills from '../components/MySkills.vue'
 // import MyProjects from '../components/MyProjects.vue'
-// import MyProccess from '../components/TheProccess.vue'
 
 </script>
 
