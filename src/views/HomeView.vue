@@ -22,7 +22,7 @@
 import TheWelcome from '../components/TheWelcome.vue'
 import MySkills from '../components/MySkills.vue'
 import MyProjects from '../components/MyProjects.vue'
-import MyProccess from '../components/TheProccess.vue'
+// import MyProccess from '../components/TheProccess.vue'
 
 </script>
 
