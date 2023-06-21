@@ -88,9 +88,6 @@ let filterUpStr = function(a,b) {
   }
   return 0;
 }
-let filterUpInt = function(a,b) {
-  return a.score - b.score
-}
 let filterDownInt = function(a,b) {
   return b.score - a.score
 }
