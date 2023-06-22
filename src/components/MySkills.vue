@@ -5,7 +5,7 @@
       <h2>What I'm great at.</h2>
     </div>
     <div v-if="newSkills" class="row skills">
-      <div class="col-2 skill" v-for="(skill, index) in newSkills" :key="index">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill" v-for="(skill, index) in newSkills" :key="index">
         <div class="skill-main">
           <img :src="'https://github.com/anang-prasetyo/portofolioku/blob/main/src/assets/img/logo/'+ skill.name + '.jpg?raw=true'" :alt='skill.name' style="border:1px solid black">
           <div>{{skill.name}}</div>
