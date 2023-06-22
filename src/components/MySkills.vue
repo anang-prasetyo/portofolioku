@@ -7,7 +7,7 @@
     <div v-if="newSkills" class="row skills">
       <div class="col-2 skill" v-for="(skill, index) in newSkills" :key="index">
         <div class="skill-main">
-          <img :src="'src/assets/img/logo/'+ skill.name + '.jpg'" :alt='skill.name' style="border:1px solid black">
+          <img :src="'https://github.com/anang-prasetyo/portofolioku/blob/main/src/assets/img/logo/'+ skill.name + '.jpg?raw=true'" :alt='skill.name' style="border:1px solid black">
           <div>{{skill.name}}</div>
           <div class="score" v-if="skill.score == 3">Average</div>
           <div class="score" v-else-if="skill.score == 4">Good</div>

@@ -9,9 +9,9 @@
       <div class="col-sm col-md-6 col-lg-4 my-card" v-for="dw, i in newDb" :key="i">
         <div class="my-card-main justify-content-start">
           <div class="image position-relative">
-            <img :src="'src/assets/img/'+ dw.name + '.jpg'" :alt="dw.name">
+            <img :src="'https://github.com/anang-prasetyo/portofolioku/blob/main/src/assets/img/'+ dw.name + '.jpg?raw=true'" :alt="dw.name">
             <div class="d-flex gap-1 flex-wrap align-items-end justify-content-center position-absolute w-100 tag-img">
-              <img v-for="t, i in dw.tag.sort()" :key="i" :src="'src/assets/img/logo/'+ t + '.jpg'" :alt="t">
+              <img v-for="t, i in dw.tag.sort()" :key="i" :src="'https://github.com/anang-prasetyo/portofolioku/blob/main/src/assets/img/logo/'+ t + '.jpg?raw=true'" :alt="t">
             </div>
           </div>
           <div v-if="dbDetail[i]" class="px-4 py-2 d-flex flex-column gap-2 w-100">
