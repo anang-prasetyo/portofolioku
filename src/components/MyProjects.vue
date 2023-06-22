@@ -5,8 +5,8 @@
       <h2>I make modern website.</h2>
     </div>
     
-    <div class="row my-cards row-gap-4">
-      <div class="col-sm col-md-6 col-lg-4 my-card" v-for="dw, i in db.web.sort(filterUpStr)" :key="i">
+    <div v-if="newDb" class="row my-cards row-gap-4">
+      <div class="col-sm col-md-6 col-lg-4 my-card" v-for="dw, i in newDb" :key="i">
         <div class="my-card-main justify-content-start">
           <div class="image position-relative">
             <img :src="'src/assets/img/'+ dw.name + '.jpg'" :alt="dw.name">
@@ -208,6 +208,7 @@ const previousIndex = (a, b, c) => {
     }
   }
 }
+const newDb = ref()
 
 let filterUpStr = function(a,b) {
   let fa = a.name.toLowerCase(),
@@ -226,6 +227,7 @@ onMounted(() => {
   document.onreadystatechange = async() => {
     if (document.readyState == "complete") {
       console.log('Page completed with image and files!')
+      newDb.value = db.value.web.sort(filterUpStr)
       currentDb.value.web = db.value.web[0]
       currentDb.value.game = db.value.game[0]
       currentDb.value.animasi = db.value.animasi[0]

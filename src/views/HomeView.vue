@@ -3,9 +3,6 @@
     <the-welcome />
     <my-skills />
     <my-projects />
-    <div v-for="i in 5" :key="i">
-      <div>{{ i }}</div>
-    </div>
     <div class="container">
       <div class="row">
         <div class="col">

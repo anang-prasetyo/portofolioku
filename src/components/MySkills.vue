@@ -4,8 +4,8 @@
       <h2 class="text-gradient">My Skills</h2>
       <h2>What I'm great at.</h2>
     </div>
-    <div class="row skills">
-      <div class="col-2 skill" v-for="(skill, index) in skills.sort(filterUpStr).sort(filterDownInt)" :key="index">
+    <div v-if="newSkills" class="row skills">
+      <div class="col-2 skill" v-for="(skill, index) in newSkills" :key="index">
         <div class="skill-main">
           <img :src="'src/assets/img/logo/'+ skill.name + '.jpg'" :alt='skill.name' style="border:1px solid black">
           <div>{{skill.name}}</div>
@@ -19,9 +19,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 // poor, fair, average, good, excelent
+const newSkills = ref()
 const skills = ref([
   {
     name: 'Photoshop',
@@ -91,6 +92,9 @@ let filterUpStr = function(a,b) {
 let filterDownInt = function(a,b) {
   return b.score - a.score
 }
+onMounted(() => {
+  newSkills.value = skills.value.sort(filterUpStr).sort(filterDownInt)
+})
 </script>
 
 <style lang="scss" scoped>
